@@ -1,0 +1,34 @@
+{
+  "name": "transaction-ledger-api",
+  "version": "1.0.0",
+  "description": "REST API for a transaction ledger: accounts, credit/debit transactions, balances, history and transfers.",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:migrate": "node scripts/migrate.js",
+    "test": "node --test --test-concurrency=1 \"tests/**/*.test.js\""
+  },
+  "keywords": [
+    "ledger",
+    "express",
+    "postgresql",
+    "rest-api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "pg": "^8.23.1",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.1"
+  }
+}
